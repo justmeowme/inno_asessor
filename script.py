@@ -84,7 +84,7 @@ def fun(l1, l2):
         grades_str += (wks.acell(alf[k]+'1').value + ": " + str(i) + '\n')
         k += 1
 
-    full_fb = str(fb) + '\n\n' + grades_str + '\n\n' + "Ссылка на урок: " + lesson_link + '\n\n' + "Средний балл за урок: " + str(round(sum(grades)/len(grades), 2))
+    full_fb = str(fb) + '\n\n' + grades_str + '\n\n' + "Ссылка на урок: " + lesson_link + '\n\n' + "Средний балл за урок: " + str(round(sum(grades)/len(grades), 2)).replace('.', ',')
     print(name)
     wks2.update('A'+str(l2), name)
     wks2.update('B'+str(l2), full_fb)
